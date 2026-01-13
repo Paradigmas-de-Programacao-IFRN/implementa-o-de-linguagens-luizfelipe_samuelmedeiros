@@ -1,0 +1,58 @@
+# Teste Geral
+
+# 1. Aritmetica
+exiba "=== Teste 1: Aritmetica ===";
+a := 10 / 2;
+exiba a; 
+b := 2 ^ 3;
+exiba b; 
+
+# 2. Logica
+exiba "=== Teste 2: Logica ===";
+se (1=1) ou (1=2) entao exiba "OU ok" senao exiba "OU falhou";
+se (1=1) xor (1=1) entao exiba "XOR falhou" senao exiba "XOR ok";
+
+# 3. Relacional
+exiba "=== Teste 3: Relacional ===";
+se 5 <> 4 entao exiba "Diferente ok" senao exiba "Diferente falhou";
+se 5 > 4 entao exiba "Maior ok" senao exiba "Maior falhou";
+
+# 4. Terminator ; check (implicit)
+
+# 5. Para
+exiba "=== Teste 5: Para ===";
+para i de 1 ate 3 faca exiba i;
+
+# 6. Repita
+exiba "=== Teste 6: Repita ===";
+repita 2 vezes exiba "Repetindo";
+
+# 7. Senaose
+exiba "=== Teste 7: Senaose ===";
+n := 5;
+se n = 1 entao exiba "Um"
+senaose n = 5 entao exiba "Cinco"
+senao exiba "Outro";
+
+# 8. Escolha
+exiba "=== Teste 8: Escolha ===";
+x := 2;
+escolha x {
+  1 : exiba "Caso 1";
+  2 : exiba "Caso 2";
+  _ : exiba "Padrao";
+};
+
+# 9. Atribuicao Paralela
+exiba "=== Teste 9: Atribuicao Paralela ===";
+x, y := 100, 200;
+exiba x;
+exiba y;
+x, y := y, x;
+exiba "Troca efetuada:";
+exiba x; 
+exiba y; 
+
+# 10. Exiba expression
+exiba "=== Teste 10: Exiba Expressao ===";
+exiba 12345;

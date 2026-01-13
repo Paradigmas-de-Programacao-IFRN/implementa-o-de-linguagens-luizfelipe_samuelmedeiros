@@ -2,30 +2,39 @@ grammar Enquanto;
 
 programa : seqComando;     // sequência de comandos
 
-seqComando: comando (';' comando)* ;
+seqComando: (comando ';')+;
 
-comando: ID ':=' expressao                               # atribuicao
+comando: listaId ':=' listaExpressao                     # atribuicao
        | 'skip'                                          # skip
-       | 'se' booleano 'entao' comando 'senao' comando   # se
+       | 'se' booleano 'entao' comando ('senaose' booleano 'entao' comando)* ('senao' comando)?   # se
        | 'enquanto' booleano 'faca' comando              # enquanto
-       | 'exiba' TEXTO                                   # exiba
+       | 'para' ID 'de' expressao 'ate' expressao 'faca' comando # para
+       | 'repita' expressao 'vezes' comando              # repita
+       | 'escolha' expressao '{' caso* '}'               # escolha
+       | 'exiba' (TEXTO | expressao)                     # exiba
        | 'escreva' expressao                             # escreva
        | '{' seqComando '}'                              # bloco
        ;
 
+caso : (expressao | 'padrao' | '_') ':' comando ';';
+
+listaId : ID (',' ID)*;
+listaExpressao : expressao (',' expressao)*;
+
 expressao: INT                                           # inteiro
          | 'leia'                                        # leia
          | ID                                            # id
-         | expressao '*' expressao                       # opBin
-         | expressao ('+' | '-') expressao               # opBin
          | '(' expressao ')'                             # expPar
+         | <assoc=right> expressao '^' expressao         # opBin
+         | expressao ('*' | '/') expressao               # opBin
+         | expressao ('+' | '-') expressao               # opBin
          ;
 
 booleano: BOOLEANO                                       # bool
-        | expressao '=' expressao                        # opRel
-        | expressao '<=' expressao                       # opRel
+        | expressao ('=' | '<=' | '>=' | '>' | '<' | '<>') expressao # opRel
         | 'nao' booleano                                 # naoLogico
         | booleano 'e' booleano                          # eLogico
+        | booleano ('ou' | 'xor') booleano               # opLogico
         | '(' booleano ')'                               # boolPar
         ;
 

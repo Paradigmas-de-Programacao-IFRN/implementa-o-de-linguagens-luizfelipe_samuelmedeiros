@@ -89,6 +89,42 @@ public class EnquantoBaseListener implements EnquantoListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterPara(EnquantoParser.ParaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPara(EnquantoParser.ParaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRepita(EnquantoParser.RepitaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRepita(EnquantoParser.RepitaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEscolha(EnquantoParser.EscolhaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEscolha(EnquantoParser.EscolhaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterExiba(EnquantoParser.ExibaContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -120,6 +156,42 @@ public class EnquantoBaseListener implements EnquantoListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBloco(EnquantoParser.BlocoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCaso(EnquantoParser.CasoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCaso(EnquantoParser.CasoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterListaId(EnquantoParser.ListaIdContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitListaId(EnquantoParser.ListaIdContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterListaExpressao(EnquantoParser.ListaExpressaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitListaExpressao(EnquantoParser.ListaExpressaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -228,6 +300,18 @@ public class EnquantoBaseListener implements EnquantoListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOpRel(EnquantoParser.OpRelContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOpLogico(EnquantoParser.OpLogicoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOpLogico(EnquantoParser.OpLogicoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
